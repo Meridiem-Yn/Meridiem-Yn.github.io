@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meridiem-Yn — Data Science Portfolio</title>
+  <meta name="description" content="Course projects and small working tools in data pipelines, web interfaces and provenance logging.">
+  <meta name="theme-color" content="#1a2a44">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20fill='%231a2a44'/%3E%3Ccircle%20cx='16'%20cy='16'%20r='6'%20fill='%230f766e'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-head">
+    <div class="wrap head-row">
+      <a class="mark" href="#top">
+        <span class="mark-dot" aria-hidden="true"></span>
+        <span class="mark-text">Meridiem-Yn</span>
+      </a>
+      <button class="nav-btn" id="navBtn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav class="nav" id="nav" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#grants">Grants</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#service">Service</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <p class="role">Data science undergraduate &middot; pipelines, interfaces, provenance</p>
+          <h1>Meridiem-Yn</h1>
+          <p class="affil">BSc Data Science<br>Course projects in systems and web data</p>
+          <p class="lede">I build small things that keep working: a telemetry sync for a vending machine, a log that tells you which prompt changed, a page that needs no build step. This site collects what I have shipped and what I am currently poking at.</p>
+          <div class="cta-row">
+            <!-- CV: put a redacted CV.pdf into assets/ ; if you don't want to publish one, delete this line -->
+            <a class="btn btn-solid" href="assets/CV.pdf" download>Download CV</a>
+            <a class="btn btn-ghost" href="#publications">Publications</a>
+          </div>
+          <ul class="hero-links">
+            <li><a href="#contact">GitHub</a></li>
+            <li><a href="#research">Projects</a></li>
+            <li><a href="#teaching">Notes</a></li>
+          </ul>
+        </div>
+
+        <aside class="now" aria-label="Current work">
+          <p class="now-title">Currently</p>
+          <dl>
+            <dt>Building</dt>
+            <dd>A prompt log that survives a model switch</dd>
+            <dt>Learning</dt>
+            <dd>Edge sync that restarts without losing a row</dd>
+            <dt>Open to</dt>
+            <dd>Coursework collaboration, small data jobs</dd>
+          </dl>
+          <p class="now-stamp">Updated November 2026</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <h2>About</h2>
+        <div class="prose">
+          <p>I came to data science through the back door: first fixing a friend's spreadsheet, then rebuilding a receipt pipeline, then finding that most of the interesting work sits between the sensor and the dashboard, in the part nobody puts on a slide.</p>
+          <p>Most of my projects start with one question &mdash; can this be made boring? If a system needs a person to remember something every morning, it is not finished. I write plain HTML, depend on few libraries, and will take a two-hundred-line script over a framework that has to be explained to the next person.</p>
+        </div>
+        <dl class="focus">
+          <div>
+            <dt>Pipelines</dt>
+            <dd>SQLite, Python, scheduled sync. Small, restartable, observable.</dd>
+          </div>
+          <div>
+            <dt>Interfaces</dt>
+            <dd>Semantic HTML, one CSS file, no build step, works on a phone.</dd>
+          </div>
+          <div>
+            <dt>Provenance</dt>
+            <dd>Logging what changed, when, and why &mdash; so a result can be traced.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===== Research ===== -->
+    <section class="section" id="research">
+      <div class="wrap">
+        <h2>Research &amp; projects</h2>
+        <ol class="project-list">
+          <li>
+            <span class="p-year">2026</span>
+            <div class="p-body">
+              <h3>Edge telemetry for a vending machine</h3>
+              <p>Replaced a handwritten restock log with a scheduled sync into SQLite, plus a daily summary that a non-technical operator can read. Runs on a machine that is switched off most nights.</p>
+              <p class="tags">SQLite &middot; Python &middot; cron &middot; offline-first</p>
+            </div>
+          </li>
+          <li>
+            <span class="p-year">2026</span>
+            <div class="p-body">
+              <h3>Prompt provenance</h3>
+              <p>Every prompt change is versioned with the output it produced, so a regression can be attributed to a diff instead of a guess. Built for local models where vendor dashboards do not exist.</p>
+              <p class="tags">LLM &middot; logging &middot; experiment tracking</p>
+            </div>
+          </li>
+          <li>
+            <span class="p-year">2025</span>
+            <div class="p-body">
+              <h3>Usable night-sky sites</h3>
+              <p>Turned a set of dated exposures into an index of where the sky is actually dark enough to bother, with the method written down well enough for someone else to repeat.</p>
+              <p class="tags">data cleaning &middot; mapping &middot; reproducibility</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Publications ===== -->
+    <section class="section" id="publications">
+      <div class="wrap">
+        <h2>Publications</h2>
+        <div class="pub-tools">
+          <div class="filters" role="group" aria-label="Filter publications by type">
+            <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="chip" type="button" data-filter="report" aria-pressed="false">Reports</button>
+            <button class="chip" type="button" data-filter="conference" aria-pressed="false">Conference</button>
+            <button class="chip" type="button" data-filter="journal" aria-pressed="false">Journal</button>
+          </div>
+          <p class="filter-count" id="pubCount" role="status" aria-live="polite">4 entries</p>
+        </div>
+
+        <ol class="pub-list" id="pubList">
+          <li class="pub" data-kind="report">
+            <span class="p-year">2026</span>
+            <div>
+              <h3>Edge telemetry without a server: SQLite as the source of truth</h3>
+              <p class="venue">Technical report</p>
+              <p class="pub-links"><a href="#contact">PDF</a> <a href="#contact">Code</a></p>
+            </div>
+          </li>
+          <li class="pub" data-kind="report">
+            <span class="p-year">2026</span>
+            <div>
+              <h3>Tracing prompt drift in small model pipelines</h3>
+              <p class="venue">Working paper</p>
+              <p class="pub-links"><a href="#contact">PDF</a> <a href="#contact">Code</a></p>
+            </div>
+          </li>
+          <li class="pub" data-kind="conference">
+            <span class="p-year">2025</span>
+            <div>
+              <h3>A reproducible workflow for night-sky exposure sets</h3>
+              <p class="venue">Student conference poster</p>
+              <p class="pub-links"><a href="#contact">Poster</a></p>
+            </div>
+          </li>
+          <li class="pub" data-kind="journal">
+            <span class="p-year">2025</span>
+            <div>
+              <h3>What three files can do for a course site</h3>
+              <p class="venue">Course journal, issue 2</p>
+              <p class="pub-links"><a href="#contact">PDF</a></p>
+            </div>
+          </li>
+        </ol>
+
+        <p class="empty" id="pubEmpty" hidden>Nothing in this category yet.</p>
+      </div>
+    </section>
+
+    <!-- ===== Grants ===== -->
+    <section class="section" id="grants">
+      <div class="wrap">
+        <h2>Grants &amp; support</h2>
+        <div class="prose">
+          <p>No grants yet. The projects above run on borrowed hardware, free tiers and a small budget for sensors. When that changes, this section will say so, with the amount and what it paid for &mdash; not just the name of the fund.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Teaching ===== -->
+    <section class="section" id="teaching">
+      <div class="wrap">
+        <h2>Teaching</h2>
+        <ol class="project-list">
+          <li>
+            <span class="p-year">2025&ndash;26</span>
+            <div class="p-body">
+              <h3>Peer tutoring: Python and SQL</h3>
+              <p>Weekly sessions for first-year students. The material that helped most was the debugging checklist, so it is written down and reusable.</p>
+            </div>
+          </li>
+          <li>
+            <span class="p-year">2026</span>
+            <div class="p-body">
+              <h3>Workshop: a page in three files</h3>
+              <p>One hour, no framework: HTML, one CSS file, one script. Everyone left with a page they could deploy the same day.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Service ===== -->
+    <section class="section" id="service">
+      <div class="wrap">
+        <h2>Service</h2>
+        <ul class="plain-list">
+          <li>Maintainer of a small logging helper used by two course projects.</li>
+          <li>Reviewer of student project reports within the programme.</li>
+          <li>Answering setup questions in the course forum, mostly about Git.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <div class="prose">
+          <p>No email on this page by design. For anything substantive, open an issue on the repository &mdash; it keeps the context in one place and means the answer helps the next person too.</p>
+        </div>
+        <ul class="contact-list">
+          <li><span>GitHub</span><a href="https://github.com/Meridiem-Yn">github.com/Meridiem-Yn</a></li>
+          <li><span>Repository</span><a href="https://github.com/Meridiem-Yn/Meridiem-Yn.github.io">Meridiem-Yn.github.io</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-row">
+      <p>Plain HTML, one CSS file, one small script. No analytics, no cookies.</p>
+      <p><a href="#top">Back to top</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
